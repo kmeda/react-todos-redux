@@ -35,7 +35,7 @@ module.exports = {
       './app/api'
     ],
     alias: {
-      firebase: 'app/firebase/index.js',
+      app: 'app',
       applicationStyles: 'app/styles/app.scss',
       actions: 'app/actions/actions.jsx',
       reducers: 'app/reducers/reducers.jsx',

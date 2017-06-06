@@ -1,15 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {Route, Router, IndexRoute, hashHistory} from 'react-router';
+var React = require('react');
+var ReactDOM = require('react-dom');
+var {Provider} = require('react-redux');
+var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
-import TodoAPI from 'TodoAPI';
-
-import TodoApp from 'TodoApp';
-import actions from 'actions';
-
+var TodoApp = require('TodoApp');
+var actions = require('actions');
 var store = require('configureStore').configure();
-
+var TodoAPI = require('TodoAPI');
 
 store.dispatch(actions.startAddTodos());
 
@@ -17,11 +14,11 @@ store.dispatch(actions.startAddTodos());
 $(document).foundation();
 
 // App css
-require('style!css!sass!applicationStyles')
+require('style-loader!css-loader!sass-loader!applicationStyles')
 
 ReactDOM.render(
   <Provider store={store}>
-    <TodoApp />
+    <TodoApp/>
   </Provider>,
   document.getElementById('app')
 );
