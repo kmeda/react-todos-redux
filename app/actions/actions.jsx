@@ -1,5 +1,5 @@
 import moment from 'moment';
-import firebase, {firebaseRef} from './../firebase/index';
+import firebase, {firebaseRef} from 'firebase';
 
 export var setSearchText = (searchText)=>{
   return {
