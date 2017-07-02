@@ -4,9 +4,8 @@
   "description": "Simple react app",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test karma start",
-    "build": "webpack",
-    "start": "npm run build && node server.js"
+    "clean": "rimraf build",
+    "build": "npm run clean && webpack"
   },
   "author": "Andrew Mead",
   "license": "MIT",
